@@ -2,7 +2,6 @@
   "name": "akashic-putnam-county-gov",
   "version": "1.0.0",
   "description": "Putnam County TN government data connector",
-  "private": true,
   "license": "AGPL-3.0-or-later",
   "main": "index.js",
   "exports": {
@@ -28,5 +27,16 @@
     "jest": "^29.0.0",
     "@types/jest": "^29.0.0",
     "ts-jest": "^29.0.0"
+  },
+  "files": [
+    "lib/**/*",
+    "app/**/*",
+    "components/**/*",
+    "index.js",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
