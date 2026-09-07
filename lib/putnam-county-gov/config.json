@@ -1,0 +1,36 @@
+{
+  "name": "putnam-county-gov",
+  "version": "1.0.0",
+  "description": "Putnam County Government API Connector",
+  "baseUrl": "https://putnamcountytn.gov",
+  "dataSources": {
+    "countyCommission": "/county-commission",
+    "circuitCourt": "/circuit-court-clerk",
+    "ordinances": "/county-ordinances",
+    "employment": "/employment-opportunities",
+    "departmentHeads": "/county-department-heads"
+  },
+  "scrapingSchedule": "daily",
+  "dataCategories": [
+    "meeting_minutes",
+    "voting_records",
+    "court_dockets",
+    "case_details",
+    "legislative_proposals",
+    "department_activities",
+    "employment_listings"
+  ],
+  "parsing": {
+    "meetingTitle": ".meeting-title, h2, .title",
+    "meetingDate": ".date, .meeting-date, time",
+    "agendaLink": "a[href*='/meeting-agenda']",
+    "minutesLink": "a[href*='/meeting-minutes']",
+    "voterNames": ".voter-name, .member-name",
+    "voteResult": ".vote, .vote-result",
+    "caseNumber": ".case-number, h3, .case-title",
+    "caseType": ".case-type, .case-category",
+    "courtDate": ".hearing-date, .court-date",
+    "judgeName": ".judge-name, .presiding-judge",
+    "partyNames": ".party-name, .legal-party"
+  }
+}
