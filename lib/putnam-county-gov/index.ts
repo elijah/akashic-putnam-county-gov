@@ -1,3 +1,5 @@
+export { putnam_county_gov_connector as gov_connector } from "./transform";
+export { putnam_county_gov_transform as transform } from "./transform";
 export { fetchPutnamCountyGovernmentData } from "./scraper";
 
 export type { 
